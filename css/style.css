@@ -1,0 +1,192 @@
+body  {
+margin: 0;
+padding: 0;
+font-family: Roboto, sans-serif;
+background-image: url(../img/background.jpg);
+-webkit-background-size: cover;
+background-size: cover;
+}
+
+.wrapper {
+color: white;
+}
+
+ .wrapper-form {
+   color: green;
+   background-color: rgba(108, 235, 238, 0.2);
+   margin: 200px auto 0 auto;
+   padding: 10px;
+   width: 330px;
+ }
+
+.wrapper-form a {
+  text-decoration: none;
+  transition: .5s;
+  color: #298cad;
+}
+
+.wrapper-form a:hover {
+  color: #36d2ff;
+}
+
+.wrapper-form ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.a button {
+  outline: 1px solid green;
+}
+
+.wrapper-form input {
+  display: block;
+  width: 98%;
+}
+
+.tab-1 {
+  background-color: #fff;
+  display: none;
+  padding: 30px 20px 20px;
+
+}
+
+.tab-2 {
+  background-color: #fff;
+  display: none;
+  padding: 30px 20px 20px;
+
+}
+
+.tab-1.active,
+#tab-1:checked ~ #form-1,
+#tab-2:checked ~ #form-2 {
+  display: block;
+}
+
+label.tab {
+  color: #ffffff;
+  font-weight: 600;
+  padding: 15px;
+  display: inline-block;
+  border-radius: 3px 3px 0 0;
+  margin-bottom: -1;
+  cursor: pointer;
+}
+
+label.tab.active,
+input[name="tabs"]:checked + label {
+  background-color: #fff;
+  color: #1d5f75;
+}
+
+input[name="tabs"] {
+  display: none;
+}
+
+.input {
+  font-size: 16px;
+border: 2px solid #e9eaea;
+padding: 12px 14px;
+box-sizing: border-box;
+margin-bottom: 22px;
+color: #1e8da6;
+}
+
+.social {
+display: flex;
+justify-content: space-between;
+/*outline: 1px solid orange;*/
+}
+
+/*.social a {
+width: 40px;
+height: 40px;
+display: block;
+line-height: 40px;
+text-align: center;
+}*/
+
+/*.social + a {
+  margin-top: 10px;
+  display: block;
+  font-size: 12px;
+  text-align: center;
+
+}*/
+
+.box-input {
+  position: relative; /* Дає мжливість розммістити підсказку всередині поля і добавити анімацію*/
+}
+
+.box-input input { /*home/home/Desktop/Уроки/реєстрація і авторизація/з плаваючим текстом/css*/
+  border: none;
+  border-bottom: 2px solid #e9eaea;
+  padding: 10px 0;
+}
+
+.box-input label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 10px;
+  color: #c4c9c9;
+  transition: .5s;pointer-events: none;
+}
+
+.box-input input:focus ~ label,
+.box-input input:valid ~ label {
+top: -30px;
+font-size: 12px;
+color: #33d3fe;
+}
+
+a.button {
+  background: #298cad;
+  color: #ffffff;
+  font-size: 18px;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  line-height: 46px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border-bottom: 4px solid  #36d2ff;
+}
+
+a.button:hover {
+  color: #ffffff;
+}
+
+/*ефект кнопки*/
+.button::before, .button::after {
+content: "";
+display: block;
+width: 100%;
+height: 100%;
+background: #27bfdc;
+position: absolute;
+top: 0;
+left: -100%;
+transition: .3s;
+z-index: -1;
+}
+
+.button::after {
+  background: #36d2ff;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transition-delay: .2s;
+}
+
+.button:hover::before {
+left: 0;
+}
+
+.button:hover::after {
+top: 0;
+}
